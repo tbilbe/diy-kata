@@ -1,28 +1,28 @@
 const joinNames = (namesObj) => {
-    const nameArray = namesObj.map(function(x) {
-       return x.name
-    });
+  const nameArray = namesObj.map(function (x) {
+    return x.name
+  });
 
-    for (let i = 0; i < nameArray.length; i++) {
+  for (let i = 0; i < nameArray.length; i++) {
 
-       if (i === nameArray.length - 1) {
+    if (i === nameArray.length - 1) {
 
-          nameArray[i] =  `& ${nameArray[i]}`;
+      nameArray[i] = `& ${nameArray[i]}`;
 
-      } else if (i < nameArray.length - 2) {
+    } else if (i < nameArray.length - 2) {
 
-      nameArray[i] =  `${nameArray[i]},`;
+      nameArray[i] = `${nameArray[i]},`;
 
-      } else {
+    } else {
 
-          nameArray[i] = `${nameArray[i]}`;
- }
-};
+      nameArray[i] = `${nameArray[i]}`;
+    }
+  };
 
-const result = nameArray.join(' ');
+  const result = nameArray.join(' ');
 
 
-return result;
+  return result;
 
 };
 

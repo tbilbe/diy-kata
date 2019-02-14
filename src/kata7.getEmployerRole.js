@@ -1,12 +1,5 @@
 const getEmployerRole = (employeeName, employees) => {
-  const nameArray = employeeName.map(function(x) {
-    return x.role
- });
-
-
-
-return getEmployerRole('Javid', employees);
-
+  return employees.find(e => e.name === employeeName).role;
 };
 
 
