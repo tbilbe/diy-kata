@@ -1,7 +1,9 @@
-//Clear and concise, well done.
-const getEmployerRole = (employeeName, employees) => {
-  return employees.find(person => person.name === employeeName).role;
+//Excellent concise code.
 
+const getEmployerRole = (employeeName, employees) => {
+  const findEmployee = employees.find(employee => employeeName === employee.name);
+
+  return findEmployee.role;
 }
 
 module.exports = getEmployerRole

@@ -1,34 +1,23 @@
-//Poor test coverage here. We would expect to see a couple of tests run to ensure
-//there are no unexpected surprises with the results
+//Good test coverage, well done.
+
 const {
   getEmployerRole
 } = require('../src');
 
 describe('getEmployerRole', () => {
+  const employees = [{
+    name: 'Satti',
+    role: 'Developer'
+  }, {
+    name: 'Jenny',
+    role: 'Sales Associate'
+  }, {
+    name: 'Javid',
+    role: 'Human Recommended Reading Assistant'
+  }];
+
   it('returns the employee\'s role in the company', () => {
-    const employees = [{
-
-      name: 'Satti',
-
-      role: 'Developer'
-
-    }, {
-
-      name: 'Jenny',
-
-      role: 'Sales Associate'
-
-    }, {
-
-      name: 'Javid',
-
-      role: 'Human Recommended Reading Assistant'
-
-    }];
-
     expect(getEmployerRole('Javid', employees)).toBe('Human Recommended Reading Assistant');
-    //expect(getEmployerRole('Jenny', employees)).toBe('Sales Associate');
-    //expect(getEmployerRole('Satti', employees)).toBe('Developer');
-
+    expect(getEmployerRole('Jenny', employees)).toBe('Sales Associate');
   });
 });

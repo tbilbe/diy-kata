@@ -1,8 +1,7 @@
-//Nice and simple. Good use of a ternary operator.
+//Great use of ternary operator.
 
 const booleanToWord = (boolean) => {
-  return (boolean === true ? 'Yes' : 'No');
-
+  return boolean ? 'Yes' : 'No';
 }
 
 module.exports = booleanToWord;

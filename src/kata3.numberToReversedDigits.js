@@ -1,9 +1,11 @@
-//Well done, nice and simple. Also clear and easy to understand.
+//Slightly more complicated than it has to be but good effort.
+//Could have returned the same functionality in one line:
+//   return number.toString().split("").map(x => parseInt(x)).reverse();
 
 const numberToReversedDigits = (number) => {
-  return number.toString().split('').map(Number).reverse();
-
-}
-
+  let str = String(number);
+  let arr = Array.from(str).reverse();
+  return arr.map(str => parseInt(str));
+};
 
 module.exports = numberToReversedDigits;

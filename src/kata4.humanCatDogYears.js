@@ -1,23 +1,33 @@
-//Good concise code used here. You may want to consider more using line breaks
-//so everything isn't running over one line.
-//It's much easier to read and understand that way.
-//See the test feedback as to how this code would fail if given unexpected data.
+//Good breakdown and problem solving here.
+//Just some small advice, as I'm presuming the comments are for your own benefit
+//but clear and concise code doesn't need comments as it's easy to understand
+//Overall, good job on this one.
+//Try giving it a refractor when you get chance to see if you can make it more concise
 
 const humanCatDogYears = (number) => {
-   
-    let catYears = ((number > 1 ? 15 : '') + (number > 1 ? +9 : '') + (number > 2 ?  (number * 4) - 8 : ''));
-    let dogYears = ((number > 1 ? 15 : '') + (number > 1 ? +9 : '') + (number > 2 ?  (number * 5) - 10 : ''));
-    
-    const years =[number, catYears, dogYears];
-    
-    return years;
+  // human age input
+  const humanYears = number;
 
-  let catYears = ((number > 1 ? 15 : '') + (number > 1 ? +9 : '') + (number > 2 ? (number * 4) - 8 : ''));
-  let dogYears = ((number > 1 ? 15 : '') + (number > 1 ? +9 : '') + (number > 2 ? (number * 5) - 10 : ''));
+  // First and second year for cat and dog;
+  const catDogFirstSeconodYear = 15 + 9;;
 
-  const years = [number, catYears, dogYears];
+  // Cat years after first 2 years;
+  const catOtherYears = (humanYears - 2) * 4;
 
-  return years;
+  // Dog years after first 2 years;
+  const dogOtherYears = (humanYears - 2) * 5;
+
+  // Total dog years converted from humanYears input
+  let totalCatYears = catDogFirstSeconodYear + catOtherYears;
+
+  // Total dog years converted from humanYears input
+  let totalDogYrs = catDogFirstSeconodYear + dogOtherYears;
+
+  // Create the array of human, cat and dog years
+  let humanCatDogArr = [number, totalCatYears, totalDogYrs]
+
+  // output array above;
+  return humanCatDogArr;
 
 }
 
