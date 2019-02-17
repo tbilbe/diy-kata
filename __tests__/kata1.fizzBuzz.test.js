@@ -22,5 +22,6 @@ describe('fizzBuzz', () => {
   it("returns the number when it isn't a multiple of 3 or 5", () => {
     expect(fizzBuzz(4)).toBe(4);
     expect(fizzBuzz(11)).toBe(11);
+
   });
 });

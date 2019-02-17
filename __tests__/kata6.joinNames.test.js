@@ -26,3 +26,4 @@ describe('joinNames', () => {
     }])).toEqual("Bart, Lisa, Maggie & Steve");
   });
 });
+

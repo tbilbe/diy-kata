@@ -23,6 +23,7 @@ const humanCatDogYears = (number) => {
 
     return [humanYears, catYears, dogYears]
   }
+
 }
 module.exports = humanCatDogYears;
 
@@ -44,3 +45,4 @@ Dog Years
 Assertion
 
     returns array of human, cat and dog years when passed human years*/
+

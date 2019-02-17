@@ -22,4 +22,5 @@ describe('reachDestination', () => {
   it('returns string with estimated time of arrival', () => {
     expect(reachDestination(0, 0)).toEqual("You have already arrived or you are not moving so can't calculate eta!");
   });
+
 });
