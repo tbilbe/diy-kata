@@ -9,6 +9,8 @@
 // return `I should be there in about ${time} hour`;
 
 const reachDestination = (distance, speed) => {
+   
+    const hours =(distance / speed) ;
 
   const hours = (distance / speed);
 
@@ -17,6 +19,7 @@ const reachDestination = (distance, speed) => {
 
   // for some reason it returns a string value so had to parse to decimal number
   return parseFloat(roundUp);
+
 }
 
 module.exports = reachDestination;

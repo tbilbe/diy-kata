@@ -13,5 +13,6 @@ describe('joinNames', () => {
     }, {
       name: 'Maggie'
     }])).toEqual('Bart, Lisa & Maggie');
+
   });
 });

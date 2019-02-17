@@ -13,5 +13,6 @@ describe('reachDestination', () => {
     //Extra test added:
     expect(reachDestination(80, 120)).toBe(`I should be there in about 1 hour`);
 
+
   });
 });

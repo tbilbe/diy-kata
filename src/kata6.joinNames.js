@@ -14,6 +14,7 @@ const joinNames = (namesObj) => {
     }
   }, '');
 
+
   // return the result array as a string with String constructor
   return String(resultsArr);
 }
