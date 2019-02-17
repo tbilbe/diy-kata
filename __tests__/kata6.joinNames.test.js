@@ -1,15 +1,28 @@
-const { joinNames } = require('../src');
+//Good coverage and well written tests
+
+const {
+  joinNames
+} = require('../src');
 
 describe('joinNames', () => {
-  const arrNames = [{
-    name: 'Bart'}, {
-    name: 'Lisa'}, {
-    name: 'Maggie'
-    }]
-
-  
-  it('returns string of names, seperated by commas and an ampersand', () => {
-    expect(joinNames(arrNames)).toBe('Bart,Lisa & Maggie')
-    expect(joinNames(arrNames)).toBe('John,Anne,Maria & Amanda')
+  it('returns string with estimated time of arrival', () => {
+    expect(joinNames([{
+      name: 'Bart'
+    }, {
+      name: 'Lisa'
+    }, {
+      name: 'Maggie'
+    }])).toEqual("Bart, Lisa & Maggie");
+  });
+  it('returns string with estimated time of arrival', () => {
+    expect(joinNames([{
+      name: 'Bart'
+    }, {
+      name: 'Lisa'
+    }, {
+      name: 'Maggie'
+    }, {
+      name: 'Steve'
+    }])).toEqual("Bart, Lisa, Maggie & Steve");
   });
 });

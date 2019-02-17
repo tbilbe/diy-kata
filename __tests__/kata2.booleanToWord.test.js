@@ -1,15 +1,14 @@
-//Full test coverage against all outcomes, well done
-
+//Great test coverage. Good job
 const {
   booleanToWord
 } = require('../src');
+
 describe('booleanToWord', () => {
-  it('returns Yes when value true', () => {
-
+  it('returns Yes when passed a true boolean', () => {
     expect(booleanToWord(true)).toBe('Yes')
-
   });
-  it('returns No when passed a boolean that is false', () => {
+  it('returns No when passed a false boolean', () => {
     expect(booleanToWord(false)).toBe('No')
   });
-});
+
+})

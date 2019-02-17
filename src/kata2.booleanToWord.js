@@ -1,16 +1,8 @@
-//Super simple if else statement. Good job
-//Could have used a ternary operator to make it more concise however
+//Great use of a ternary operator. Very DRY code.
+//Well done
 
 const booleanToWord = (boolean) => {
-  if (boolean === true) {
-    return 'Yes';
-  } else if (boolean === false) {
-    return 'No'
-  }
-
+  return (boolean ? "Yes" : "No");
 }
-
-
-
 
 module.exports = booleanToWord;
