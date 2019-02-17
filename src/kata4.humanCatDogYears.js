@@ -1,31 +1,17 @@
+//Good concise code used here. You may want to consider more using line breaks
+//so everything isn't running over one line.
+//It's much easier to read and understand that way.
+//See the test feedback as to how this code would fail if given unexpected data.
+
 const humanCatDogYears = (number) => {
-  function age() {
-    if (number > 1) {
-      let catYears = number - 2;
-      catYears = catYears * 4;
-      catYears = catYears + 15
-      catYears = catYears + 9;
 
-      let dogYears = number - 2;
-      dogYears = dogYears * 5;
-      dogYears = dogYears + 15;
-      dogYears = dogYears + 9;
+  let catYears = ((number > 1 ? 15 : '') + (number > 1 ? +9 : '') + (number > 2 ? (number * 4) - 8 : ''));
+  let dogYears = ((number > 1 ? 15 : '') + (number > 1 ? +9 : '') + (number > 2 ? (number * 5) - 10 : ''));
 
-      return [number, catYears, dogYears]
+  const years = [number, catYears, dogYears];
 
+  return years;
 
-    } else if (number === 1) {
-      let catYears = number + 15;
-      let dogYears = number + 15;
-
-      return [number, catYears, dogYears]
-    } else {
-      return [number, 0, 0]
-    };
-  };
-  return age();
-};
-
-
+}
 
 module.exports = humanCatDogYears;

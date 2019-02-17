@@ -1,29 +1,11 @@
+//Good use of the reduce method.
+
 const joinNames = (namesObj) => {
-  const nameArray = namesObj.map(function (x) {
-    return x.name
+  return namesObj.map(names => names.name).reduce((accumulator, currentValue, currentIndex) => {
+    return accumulator + (currentIndex === namesObj.length - 1 ? ' & ' : ', ') + currentValue;
   });
 
-  for (let i = 0; i < nameArray.length; i++) {
+}
 
-    if (i === nameArray.length - 1) {
-
-      nameArray[i] = `& ${nameArray[i]}`;
-
-    } else if (i < nameArray.length - 2) {
-
-      nameArray[i] = `${nameArray[i]},`;
-
-    } else {
-
-      nameArray[i] = `${nameArray[i]}`;
-    }
-  };
-
-  const result = nameArray.join(' ');
-
-
-  return result;
-
-};
 
 module.exports = joinNames;

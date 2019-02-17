@@ -1,12 +1,16 @@
-const { booleanToWord } = require('../src');
+//Clear and concise testing, well done.
+
+const {
+  booleanToWord
+} = require('../src');
 
 describe('booleanToWord', () => {
-it('Returns Yes when passed a boolean that equals true', () => {
+  it('returns Yes when passed true', () => {
     expect(booleanToWord(true)).toBe('Yes')
-});
+  });
 
-it('returns No when passed a boolean that equals false', () => {
-  expect(booleanToWord(false)).toBe('No')
-});
+  it('returns No when value of false passed', () => {
+    expect(booleanToWord(false)).toBe('No')
+  });
 
 });
