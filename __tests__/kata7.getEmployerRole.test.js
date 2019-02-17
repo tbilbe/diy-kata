@@ -29,5 +29,6 @@ describe('getEmployerRole', () => {
     expect(getEmployerRole('Javid', employees)).toBe('Human Recommended Reading Assistant');
     //expect(getEmployerRole('Jenny', employees)).toBe('Sales Associate');
     //expect(getEmployerRole('Satti', employees)).toBe('Developer');
+
   });
 });

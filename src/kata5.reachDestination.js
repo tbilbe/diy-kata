@@ -3,8 +3,10 @@
 //Good use of template literals!
 //See test for this file for more feedback.
 const reachDestination = (distance, speed) => {
+
   const time = Math.round(distance / speed * 2) / 2;
   return (`I should be there in ${time} hours.`);
+
 }
 
 module.exports = reachDestination;
