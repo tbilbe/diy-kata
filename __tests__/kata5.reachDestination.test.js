@@ -1,6 +1,6 @@
-//Better test coverage here but if you would have tested for 1 hour, you would have seen
-//that your code returns an error.
-//See below:
+//Good coverage here but what would happen if your code was to test for an estimated arrival
+//time of one hour?
+//your code currently returns 0.5 instead of 1.
 
 const {
   reachDestination
@@ -8,11 +8,11 @@ const {
 
 describe('reachDestination', () => {
   it('returns string with estimated time of arrival', () => {
-    expect(reachDestination(44, 10)).toEqual(4.5);
-    expect(reachDestination(55, 10)).toEqual(5.5);
-    //Extra test added:
-    expect(reachDestination(80, 120)).toBe(`I should be there in about 1 hour`);
+    expect(reachDestination(52, 35)).toBe('1.5');
+    expect(reachDestination(44, 10)).toBe('4.5');
 
+    //Extra test added
+    expect(reachDestination(80, 120)).toBe('1');
 
   });
 });

@@ -1,19 +1,22 @@
-//As mentioned previously, the test coverage here isn't good enough.
-//it's also a good idea to write code that has a failsafe incase the user enters
-//any unexpected data.
-//In this case, if the user was to enter a 0 or a minus number
-//the code would no longer work
+//Excellent test coverage. From your whole cohort, you're the only person who
+//tested for a case of the number 0 being entered. You should be super proud of
+//yourself for having the foresight to imagine this scenario where the user
+//enters incorrect date.
+//Very well done indeed!
 
 const {
   humanCatDogYears
 } = require('../src');
-
 describe('humanCatDogYears', () => {
-  it('returns array of human, cat and dog years when passed human years', () => {
-    expect(humanCatDogYears(10)).toEqual([10, 56, 64]);
 
-    //Extra test added:
-    expect(humanCatDogYears(0)).toEqual([0, 0, 0]);
+  it('returns an array of human, cat and dog years when passed human years ', () => {
+    expect(humanCatDogYears(0)).toEqual([0, 0, 0])
+    expect(humanCatDogYears(1)).toEqual([1, 15, 15])
+    expect(humanCatDogYears(2)).toEqual([2, 24, 24])
+    expect(humanCatDogYears(3)).toEqual([3, 28, 29])
+    expect(humanCatDogYears(10)).toEqual([10, 56, 64])
 
-  });
-});
+
+  })
+})
+// Look Ma, no handlebars!!!

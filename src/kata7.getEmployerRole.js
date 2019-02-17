@@ -1,9 +1,8 @@
-//Excellent concise code.
+//Great simple and concise code.
+//Well done
 
 const getEmployerRole = (employeeName, employees) => {
-  const findEmployee = employees.find(employee => employeeName === employee.name);
-
-  return findEmployee.role;
+  return employees.find(person => person.name === employeeName).role
 
 }
 

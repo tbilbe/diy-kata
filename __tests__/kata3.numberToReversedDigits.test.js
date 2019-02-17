@@ -1,5 +1,5 @@
-//Really should be seeing more test coverage here than just one line.
-//When working with numbers in JS it's always a good idea to test multiple outcomes
+//good test coverage again and well stacked tests. Very DRY approach.
+//Well done!
 
 const {
   numberToReversedDigits
@@ -7,7 +7,8 @@ const {
 
 describe('numberToReversedDigits', () => {
   it('returns a reversed array of the number\'s digits', () => {
-    expect(numberToReversedDigits(12345)).toEqual([5, 4, 3, 2, 1]);
+    expect(numberToReversedDigits([12345])).toEqual([5, 4, 3, 2, 1]);
+    expect(numberToReversedDigits([56789])).toEqual([9, 8, 7, 6, 5])
 
   });
 });

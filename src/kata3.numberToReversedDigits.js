@@ -1,12 +1,17 @@
-//Slightly more complicated than it has to be but good effort.
-//Could have returned the same functionality in one line:
-//   return number.toString().split("").map(x => parseInt(x)).reverse();
+//Well done. Easy to understand and well written code.
+//Could have been more concise as declaring variables isn't needed.
+//A return would have sufficed if the methods were chained on the same line
 
 const numberToReversedDigits = (number) => {
-  let str = String(number);
-  let arr = Array.from(str).reverse();
-  return arr.map(str => parseInt(str));
+  const numToString = number.toString().split('')
+  const reverseDigits = numToString.map(Number)
+  return reverseDigits.reverse()
 
-};
 
+
+
+
+
+
+}
 module.exports = numberToReversedDigits;

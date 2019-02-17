@@ -1,25 +1,16 @@
-//This problem should return a string with a generated number in the middle:
-//   return `I should be there in about ${time} hour`;
-
-//Also, the use of Math.round means it will round to the nearest whole number,
-//not always up.
-//Your code should look like this:
-
-// const time = Math.ceil((distance / speed) * 2) / 2;
-// return `I should be there in about ${time} hour`;
+//Good clear code that's easy to understand.
+//However, this could have been achieved slightly DRYer than it currently is.
+//You do not need to have two separate variables when you can chain the methods
+//Also, this should print out a string with a number of estimated arrival.
+//Example: return `I should be there in about ${timeRounded} hour`
 
 const reachDestination = (distance, speed) => {
-   
-    const hours =(distance / speed) ;
+  const timeEstimate = distance / speed
+  const timeRounded = Math.round(timeEstimate * 2) / 2
 
-  const hours = (distance / speed);
-
-  // round up to nearest 0.5
-  const roundUp = (Math.round(hours * 2) / 2).toFixed(1);
-
-  // for some reason it returns a string value so had to parse to decimal number
-  return parseFloat(roundUp);
+  return timeRounded.toString()
 
 }
+
 
 module.exports = reachDestination;

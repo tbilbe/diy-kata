@@ -1,16 +1,16 @@
-//Simple, effective and easy to read
-//Good job!
+//Nice and simple, easy to understand if else statement
+//Well done
 
-const fizzBuzz = (number) => {
-  if (number % 3 === 0 && number % 5 === 0) {
-    return 'FizzBuzz';
-  } else if (number % 5 === 0) {
-    return 'Buzz';
-  } else if (number % 3 === 0) {
-    return 'Fizz';
-  } else {
-    return number;
+export const fizzBuzz = (number) => {
+  if (number % 5 === 0 && number % 3 === 0) {
+    return 'FizzBuzz'
   }
+  if (number % 5 === 0) {
+    return 'Buzz'
+  }
+  if (number % 3 === 0) {
+    return 'Fizz'
+  }
+  return number
 }
-
 module.exports = fizzBuzz;

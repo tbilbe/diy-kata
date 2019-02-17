@@ -1,18 +1,15 @@
-//Better test coverage needed but well done.
-
-const {
-  joinNames
-} = require('../src');
+const { joinNames } = require('../src');
 
 describe('joinNames', () => {
-  it('returns string of names, separated by commas and an ampersand', () => {
-    expect(joinNames([{
-      name: 'Bart'
-    }, {
-      name: 'Lisa'
-    }, {
-      name: 'Maggie'
-    }])).toEqual('Bart, Lisa & Maggie');
+  const arrNames = [{
+    name: 'Bart'}, {
+    name: 'Lisa'}, {
+    name: 'Maggie'
+    }]
 
+  
+  it('returns string of names, seperated by commas and an ampersand', () => {
+    expect(joinNames(arrNames)).toBe('Bart,Lisa & Maggie')
+    expect(joinNames(arrNames)).toBe('John,Anne,Maria & Amanda')
   });
 });
