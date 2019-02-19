@@ -30,6 +30,7 @@ describe('getEmployerRole', () => {
 
       role: 'Human Recommended Reading Assistant'
 
+
     }]
 
     expect(getEmployerRole('Javid', employees)).toBe('Human Recommended Reading Assistant');

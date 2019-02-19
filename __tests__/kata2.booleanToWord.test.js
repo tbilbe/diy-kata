@@ -9,7 +9,9 @@ describe('booleanToWord', () => {
     expect(booleanToWord(true)).toBe('Yes')
   });
 
+
   it('returns No when passed false', () => {
     expect(booleanToWord(false)).toBe('No')
   });
-});
+
+}); 

@@ -6,4 +6,5 @@ const numberToReversedDigits = (number) => {
 
 // .toString(10) should be used? But assumes radix of 10 if no value given. So toString() works for converting number to string.
 
+
 module.exports = numberToReversedDigits;
