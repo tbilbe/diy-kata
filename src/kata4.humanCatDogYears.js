@@ -1,21 +1,33 @@
-//Clear and concise but doesn't cover the eventuality of a user entering an unexpected
-//number, such as a 0 or a negative.
+//Code passes the test you wrote but doesn't cover the user entering incorrect date
+//if the user enters a 0 or a negative number, this code will fail to work as intended
+//always a good idea to have a failsafe for that eventuality.
+//Could also be more concise in parts.
+//Good effort though.
 
 const humanCatDogYears = (number) => {
-  let Human = number;
-  let Cat = 24 + ((number - 2) * 4);
-  let Dog = 24 + ((number - 2) * 5);
-  return [Human, Cat, Dog];
-};
+  const array = []
+  const catAge = (number) => {
+    if (number > 2) {
+      return ((number - 2) * 4) + 24
+    } else if (number === 2) {
+      return 24
+    } else if (number < 2 && number > 0) {
+      return 15
+    }
+  }
+  const dogAge = (number) => {
+    if (number > 2) {
+      return ((number - 2) * 5) + 24
+    } else if (number === 2) {
+      return 24
+    } else if (number < 2 && number > 0) {
+      return 15
+    }
+  }
+  array.push(number)
+  array.push(catAge(number))
+  array.push(dogAge(number))
+  return array
+}
 
-// formulas
-// 15+9+((number-2)*4) = cat
-// 24+((number-2)*4) = cat
-
-// change 4 to 5 for the Dog
-
-
-// change 4 to 5 for the Dog
-
- 
 module.exports = humanCatDogYears;

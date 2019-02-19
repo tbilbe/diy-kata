@@ -1,4 +1,5 @@
-//Good test coverage. Thorough testing throughout.
+//Good test coverage here, lots of different outcomes checked.
+//Good test stacking also shows good DRY principals
 
 const {
   fizzBuzz
@@ -14,14 +15,13 @@ describe('fizzBuzz', () => {
   });
 
   it('returns FizzBuzz when passed a multiple 3 and 5', () => {
-    expect(fizzBuzz(15)).toBe('FizzBuzz')
-    expect(fizzBuzz(30)).toBe('FizzBuzz')
-    expect(fizzBuzz(90)).toBe('FizzBuzz')
+    expect(fizzBuzz(15)).toBe('FizzBuzz');
+    expect(fizzBuzz(30)).toBe('FizzBuzz');
+    expect(fizzBuzz(45)).toBe('FizzBuzz');
   });
 
   it('returns the number when it isn\'t a multiple of 3 or 5', () => {
-    expect(fizzBuzz(4)).toBe(4)
-    expect(fizzBuzz(11)).toBe(11)
-    expect(fizzBuzz(17)).toBe(17)
+    expect(fizzBuzz(4)).toBe(4);
+    expect(fizzBuzz(11)).toBe(11);
   });
 });

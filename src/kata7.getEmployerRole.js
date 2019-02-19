@@ -1,8 +1,11 @@
-//Very clear and concise. Perfect code for this problem. Well done
+//Works well but could be more concise:
+//   return employees.find(e => e.name === employeeName).role;
+//Works well overall, well done
 
 const getEmployerRole = (employeeName, employees) => {
-  return employees.find(x => x.name === employeeName).role;
+  const filterEmployees = employees.filter(worker => employeeName === worker.name)
 
+  return `${filterEmployees[0].name}: ${filterEmployees[0].role}`;
 }
 
 module.exports = getEmployerRole

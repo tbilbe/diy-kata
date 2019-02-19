@@ -1,4 +1,6 @@
-//Good test stacking and coverage. Good DRY code principals
+//We should really be seeing more test coverage here.
+//The code may pass this test with these numbers but what if we add different
+//inputs and outcomes? Does it still pass?
 
 const {
   numberToReversedDigits
@@ -7,7 +9,5 @@ const {
 describe('numberToReversedDigits', () => {
   it('returns a reversed array of the number\'s digits', () => {
     expect(numberToReversedDigits(12345)).toEqual([5, 4, 3, 2, 1]);
-    expect(numberToReversedDigits(13579)).toEqual([9, 7, 5, 3, 1]);
-    expect(numberToReversedDigits(54321)).toEqual([1, 2, 3, 4, 5]);
   });
 });

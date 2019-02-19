@@ -1,4 +1,7 @@
-//Okay test coverage. Entered an extra test to see what would happen with lower numbers
+//Okay test coverage but there should be a couple more tests
+//You could also stack these tests to make this a more DRY process
+//like you did in other tests
+//See example:
 
 const {
   reachDestination
@@ -6,12 +9,13 @@ const {
 
 describe('reachDestination', () => {
   it('returns string with estimated time of arrival', () => {
-    expect(reachDestination(44, 10)).toEqual('I should be there in 4.5 hours.')
-    expect(reachDestination(88, 10)).toEqual('I should be there in 9 hours.')
-    expect(reachDestination(41, 10)).toEqual('I should be there in 4.5 hours.')
-
-    //Added extra test
-    expect(reachDestination(80, 120)).toEqual('I should be there in 1 hours.')
+    expect(reachDestination(60, 60)).toBe('I\'ll be there in 1 hour');
+    //expect(reachDestination(124, 55)).toBe(`I\'ll be there in 2 hour`);
 
   });
+
+  it('returns a string explaining how long before arrival', () => {
+    expect(reachDestination(124, 55)).toBe(`I\'ll be there in 2 hour`);
+
+  })
 });
