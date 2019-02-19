@@ -49,6 +49,7 @@ describe('joinNames', () => {
       {
         name: 'Alice'
       },
+
     ]))
   })
 });

@@ -11,5 +11,5 @@ describe('booleanToWord', () => {
   it('returns No when passed a bool of false', () => {
     expect(booleanToWord(false)).toBe('No');
   });
-
 });
+
