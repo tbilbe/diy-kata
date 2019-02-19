@@ -1,22 +1,20 @@
-//Didn't have to define variables before running the if else statement but
-//clear and understandable code.
-//Well done
+//Clear and concise, good use of an if else statement.
+//Don't forget to use else if on the lines under the initial if
 
 const fizzBuzz = (number) => {
-  const isDivisibleBy3 = (number % 3) === 0
-  const isDivisibleBy5 = (number % 5) === 0
-
-  if (isDivisibleBy3 && isDivisibleBy5) {
-    return 'FizzBuzz'
-  }
-  if (isDivisibleBy3) {
-    return 'Fizz'
-  }
-  if (isDivisibleBy5) {
+    const isDivisibleBy3 = (number % 3) === 0
+    const isDivisibleBy5 = (number % 5) === 0
+    
+    if (isDivisibleBy3 && isDivisibleBy5) {
+        return 'FizzBuzz'
+    };
+    if (isDivisibleBy5) {
     return 'Buzz'
-  }
-  return number
-
-}
+    };
+    if (isDivisibleBy3) {
+   return 'Fizz'
+    };
+   return number
+};
 
 module.exports = fizzBuzz;

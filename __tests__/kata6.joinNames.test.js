@@ -1,20 +1,23 @@
-//Good coverage and well written tests
+//Good coverage and test stacking. Very DRY. Well done.
 
 const {
   joinNames
 } = require('../src');
 
 describe('joinNames', () => {
-  it('returns string with estimated time of arrival', () => {
+  it('returns string of names, seperated by commas and an ampersand', () => {
     expect(joinNames([{
       name: 'Bart'
     }, {
       name: 'Lisa'
     }, {
       name: 'Maggie'
-    }])).toEqual("Bart, Lisa & Maggie");
-  });
-  it('returns string with estimated time of arrival', () => {
+    }])).toEqual('Bart, Lisa & Maggie');
+    expect(joinNames([{
+      name: 'Bart'
+    }, {
+      name: 'Lisa'
+    }])).toEqual('Bart & Lisa');
     expect(joinNames([{
       name: 'Bart'
     }, {
@@ -22,8 +25,9 @@ describe('joinNames', () => {
     }, {
       name: 'Maggie'
     }, {
-      name: 'Steve'
-    }])).toEqual("Bart, Lisa, Maggie & Steve");
+      name: 'Marge'
+    }, {
+      name: 'Homer'
+    }])).toEqual('Bart, Lisa, Maggie, Marge & Homer');
   });
 });
-

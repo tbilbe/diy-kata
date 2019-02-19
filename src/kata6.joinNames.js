@@ -1,11 +1,7 @@
-//Well written code, good job.
+//very concise and clear. Well done.
 
 const joinNames = (namesObj) => {
-  return namesObj.map(object => object.name).reduce((accumulator, currentValue, currentIndex) => {
-    return accumulator + (currentIndex === namesObj.length - 1 ? ' & ' : ', ') + currentValue;
-  });
-
-}
-
+  return namesObj.map(a => a.name).join(', ').replace(/, ([^,]*)$/, ' & $1');
+};
 
 module.exports = joinNames;
