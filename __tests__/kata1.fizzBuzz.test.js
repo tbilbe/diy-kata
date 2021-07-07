@@ -1,4 +1,9 @@
-const { fizzBuzz } = require('../src');
+//Good test coverage here, lots of different outcomes checked.
+//Good test stacking also shows good DRY principals
+
+const {
+  fizzBuzz
+} = require('../src');
 
 describe('fizzBuzz', () => {
   it('returns Fizz when passed a multiple of 3', () => {

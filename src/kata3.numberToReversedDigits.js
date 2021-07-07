@@ -1,3 +1,5 @@
+//Good code, passes the test you wrote but could be more concise.
+
 const numberToReversedDigits = (number) => {
   const reversedNums = [];
   const stringNumsAr = number.toString().split('');
